@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     if (pasteId && state === INITIAL) {
       setState(LOADING);
-      setContent('Loading...');
+      setContent('загрузка');
 
       loadFromBytebin(pasteId).then(({ ok, content, type }) => {
         if (ok) {
@@ -59,8 +59,8 @@ function get404Message(pasteId: string) {
        ██║╚██████╔╝     ██║
        ╚═╝ ╚═════╝      ╚═╝
 
-  not found: '${pasteId}'
-  maybe the paste expired?
+  не найдено: '${pasteId}'
+  мб паста умерла?
 `;
 }
 
