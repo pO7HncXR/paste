@@ -100,7 +100,7 @@ export default function EditorControls({
       <Section>
         <Button onClick={reset}>[new]</Button>
         <Button onClick={save}>
-          {recentlySaved ? '[link copied!]' : saving ? '[saving...]' : '[save]'}
+          {recentlySaved ? '[ссылка скопирована!]' : saving ? '[сохранение...]' : '[сохранить]'}
         </Button>
         <MenuButton
           label="language"
@@ -122,11 +122,11 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/lucko/paste#readme"
-          target="_blank"
+          href="https://t.me/opiumlxrd"
+          target="_blank" 
           rel="noreferrer"
         >
-          [about]
+          [owner]
         </Button>
       </Section>
     </Header>
