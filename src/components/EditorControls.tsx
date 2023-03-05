@@ -98,7 +98,7 @@ export default function EditorControls({
   return (
     <Header>
       <Section>
-        <Button onClick={reset}>[new]</Button>
+        <Button onClick={reset}>[новый файл]</Button>
         <Button onClick={save}>
           {recentlySaved ? '[ссылка скопирована!]' : saving ? '[сохранение...]' : '[сохранить]'}
         </Button>
