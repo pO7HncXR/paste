@@ -17,8 +17,8 @@ export interface EditorControlsProps {
   setLanguage: (value: string) => void;
   readOnly: boolean;
   setReadOnly: (value: boolean) => void;
-  // theme: keyof Themes;
-  // setTheme: (value: keyof Themes) => void;
+  theme: keyof Themes;
+  setTheme: (value: keyof Themes) => void;
   zoom: (delta: number) => void;
 }
 
@@ -29,8 +29,8 @@ export default function EditorControls({
   setLanguage,
   readOnly,
   setReadOnly,
-  // theme,
-  // setTheme,
+  theme,
+  setTheme,
   zoom,
 }: EditorControlsProps) {
   const [saving, setSaving] = useState<boolean>(false);
@@ -113,12 +113,12 @@ export default function EditorControls({
       <Section>
         <Button onClick={() => zoom(1)}>[+ </Button>
         <Button onClick={() => zoom(-1)}> -]</Button>
-        {/* <MenuButton
-          label="theme"
+        <MenuButton
+          label="тема"
           value={theme}
           setValue={setTheme}
           ids={Object.keys(themes) as (keyof Themes)[]}
-        /> */}
+        />
         <Button
           className="optional"
           as="a"
