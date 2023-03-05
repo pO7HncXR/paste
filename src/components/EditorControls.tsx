@@ -53,7 +53,7 @@ export default function EditorControls({
           pathname: pasteId,
         });
         copy(window.location.href);
-        document.title = 'paste | ' + pasteId;
+        document.title = 'паста | ' + pasteId;
       }
     });
   }, [actualContent, language, recentlySaved]);
@@ -88,7 +88,7 @@ export default function EditorControls({
       pathname: '/',
       hash: '',
     });
-    document.title = 'paste';
+    document.title = 'паста';
   }
 
   function unsetReadOnly() {
@@ -103,7 +103,7 @@ export default function EditorControls({
           {recentlySaved ? '[ссылка скопирована!]' : saving ? '[сохранение...]' : '[сохранить]'}
         </Button>
         <MenuButton
-          label="language"
+          label="язык"
           value={language}
           setValue={setLanguage}
           ids={languages}
@@ -113,12 +113,12 @@ export default function EditorControls({
       <Section>
         <Button onClick={() => zoom(1)}>[+ </Button>
         <Button onClick={() => zoom(-1)}> -]</Button>
-        <MenuButton
+        {/* <MenuButton
           label="theme"
           value={theme}
           setValue={setTheme}
           ids={Object.keys(themes) as (keyof Themes)[]}
-        />
+        /> */}
         <Button
           className="optional"
           as="a"
